@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularApp';
+
+  data: string = 'Angular Batch 7';
 }

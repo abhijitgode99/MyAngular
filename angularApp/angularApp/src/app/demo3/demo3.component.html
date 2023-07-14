@@ -1,1 +1,19 @@
 <p>demo3 works!</p>
+<h1>
+    Hello {{name}}
+</h1>
+{{obj.fname}}
+<div>
+    <img [src]="imageURL" alt="">
+</div>
+<div>
+    <button [disabled]="isDisabled"  (click)="SaveData()">Click Me</button>
+</div>
+<h1>Two-Way Data Binding</h1>
+<div>
+    <input type="text" placeholder="Please enter your Department" [(ngModel)]="department" >
+</div>
+
+<div>
+    {{department}}
+</div>

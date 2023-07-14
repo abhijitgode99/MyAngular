@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { Demo2Component } from './demo2/demo2.component';
 import { Demo3Component } from './demo3/demo3.component';
 import { DemoComponent } from './demo/demo.component';
+import { FormsModule } from '@angular/forms';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Demo2Component,
     DemoComponent,
-    Demo3Component
+    Demo3Component,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
