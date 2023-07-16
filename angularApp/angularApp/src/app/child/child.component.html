@@ -1,1 +1,17 @@
-<p>child works!</p>
+<h1>Assignment</h1>
+
+<ol>
+    <li><h3>Add a input field which updates a property ("username") via Two-Way-Binding</h3></li>
+    <strong>Username : </strong><input type="text" placeholder="Enter Username" [(ngModel)]="userName">
+
+    <li><h3>Output the username property via String Interpolation (in a paragraph below the input)</h3></li>
+    <strong>Inside paragraph Tag ==> </strong><p>{{userName}}</p>
+
+    <li>Add a button which may only be clicked if the username is NOT an empty string</li><br>
+
+    <li>Upon clicking the button, the username should be reset to an empty string</li><br>
+
+    <button [disabled]="isEmpty()" (click)="reset()"><strong>Reset</strong></button>
+
+
+</ol>
