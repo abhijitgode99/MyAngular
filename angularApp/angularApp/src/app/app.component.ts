@@ -9,4 +9,8 @@ export class AppComponent {
   title = 'angularApp';
   
   data: string = 'Angular Batch 7';
+
+  getDataFromChild(value) {
+    console.log(value);   
+   }
 }
