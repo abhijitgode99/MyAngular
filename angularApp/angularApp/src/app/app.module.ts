@@ -8,6 +8,7 @@ import { Demo3Component } from './demo3/demo3.component';
 import { DemoComponent } from './demo/demo.component';
 import { FormsModule } from '@angular/forms';
 import { ChildComponent } from './child/child.component';
+import { NewChildComponent } from './new-child/new-child.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ChildComponent } from './child/child.component';
     Demo2Component,
     DemoComponent,
     Demo3Component,
-    ChildComponent
+    ChildComponent,
+    NewChildComponent
   ],
   imports: [
     BrowserModule,

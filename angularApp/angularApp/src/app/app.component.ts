@@ -10,6 +10,8 @@ export class AppComponent {
   
   data: string = 'Angular Batch 7';
 
+  course=['Angular','React','Java','Tesing','Devops'];
+
   getDataFromChild(value) {
     console.log(value);   
    }
