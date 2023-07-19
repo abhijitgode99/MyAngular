@@ -1,1 +1,38 @@
 <p>demo2 works!</p>
+<h3>Assignment</h3>
+<div class="container">
+    <div class="checkbox">
+        <div class="col-md-4">
+            <label><input type="checkbox" value="value is chacked" id="mycheckbox" [(ngModel)]="isCheckBoxSelected" (change)="onCheckBoxChange($event)" [(ngModel)]="isCheckBoxSelected"> value is chacked</label><br>
+        </div>
+        <div class="col-md-12">
+            <h3>{{myvalue}}</h3>
+        </div> 
+</div>
+<div>
+    <h1>{{title}}</h1>
+    <table class="table">
+            <thead>
+                <tr>
+                        <th>
+                                Course Name
+                        </th>
+                        <th>
+                                Trainer Name
+                        </th>
+                </tr>
+             </thead>
+            <!-- <tbody>
+                <tr *ngFor="let courses of Course">
+                   <td>{{courses.courseName}}</td>
+                   <td>{{courses.trainerName}}</td>
+                </tr>
+            </tbody> -->
+            <div *ngFor="let employee of employeeRecords">
+                {{employee.eName}}
+                {{employee.eCity}}
+                {{employee.Salary}}
+                <img width="50" height="50" [src]="employee.imgUrl" alt="">
+            </div>
+    </table>
+</div>
