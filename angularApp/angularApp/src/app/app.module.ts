@@ -9,6 +9,9 @@ import { DemoComponent } from './demo/demo.component';
 import { FormsModule } from '@angular/forms';
 import { ChildComponent } from './child/child.component';
 import { NewChildComponent } from './new-child/new-child.component';
+import { NgifComponent } from './ngif/ngif.component';
+import { NgforComponent } from './ngfor/ngfor.component';
+import { NgSwitchCaseComponent } from './ng-switch-case/ng-switch-case.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { NewChildComponent } from './new-child/new-child.component';
     DemoComponent,
     Demo3Component,
     ChildComponent,
-    NewChildComponent
+    NewChildComponent,
+    NgifComponent,
+    NgforComponent,
+    NgSwitchCaseComponent
   ],
   imports: [
     BrowserModule,
