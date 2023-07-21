@@ -12,6 +12,8 @@ import { NewChildComponent } from './new-child/new-child.component';
 import { NgifComponent } from './ngif/ngif.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { NgSwitchCaseComponent } from './ng-switch-case/ng-switch-case.component';
+import { AttributeComponent } from './attribute/attribute.component';
+import { DirectiveDirective } from './directive.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { NgSwitchCaseComponent } from './ng-switch-case/ng-switch-case.component
     NewChildComponent,
     NgifComponent,
     NgforComponent,
-    NgSwitchCaseComponent
+    NgSwitchCaseComponent,
+    AttributeComponent,
+    DirectiveDirective
   ],
   imports: [
     BrowserModule,
