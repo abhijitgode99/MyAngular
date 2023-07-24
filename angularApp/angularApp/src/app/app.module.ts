@@ -14,6 +14,8 @@ import { NgforComponent } from './ngfor/ngfor.component';
 import { NgSwitchCaseComponent } from './ng-switch-case/ng-switch-case.component';
 import { AttributeComponent } from './attribute/attribute.component';
 import { DirectiveDirective } from './directive.directive';
+import { SimpleFormComponent } from './simple-form/simple-form.component';
+import { FormTaskComponent } from './form-task/form-task.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { DirectiveDirective } from './directive.directive';
     NgforComponent,
     NgSwitchCaseComponent,
     AttributeComponent,
-    DirectiveDirective
+    DirectiveDirective,
+    SimpleFormComponent,
+    FormTaskComponent
   ],
   imports: [
     BrowserModule,
