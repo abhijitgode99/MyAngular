@@ -4,33 +4,53 @@
         <div class="col-sm-4" style="background-color:white;">
             <h4 class="text-info mt-5">Genelar Information</h4>
             <form>
-            <div>
-                <input type="text" class="form-control mt-3" id="fname" name="fname"  placeholder="First Name">
+            <div class="form-group">
+                <input type="text" class="form-control mt-3" id="fname" name="fname"  placeholder="First Name" >
+            </div>
+            <div class="form-group">
                 <input type="text" class="form-control mt-3" id="lname" name="lname"  placeholder="last Name">
+            </div>
+            <div class="form-group">
                 <input type="text" class="form-control mt-3" id="position" name="position" placeholder="Position">
+            </div>
+            <div class="form-group">
                 <input type="text" class="form-control mt-3" id="Company" name="Company" placeholder="Company">
+            </div>
+            <div class="form-group">
                 <input type="text" class="form-control mt-3" id="Company" name="Business Arena" placeholder="Business Arena">
             </div>
             </form>
         </div>
-        <div class="col-sm-4"  style="background-color:blue; color:white">
+        <div class="col-sm-4"  style="background-color:rgb(161, 161, 203); color:white">
             <h4 class="text-light mt-5">Contact Details</h4>
-            <form>
-            <div>
-                <input type="text" class="form-control mt-3" id="street" name="street"  placeholder="Street">
-                <input type="text" class="form-control mt-3" id="info" name="info"  placeholder="Additional Information">
-                <input type="text" class="form-control mt-3" id="pincode" name="pincode" placeholder="Pin Code">
-                <input type="text" class="form-control mt-3" id="place" name="place" placeholder="Place">
-                <input type="text" class="form-control mt-3" id="country" name="country" placeholder="Country">
-                <input type="text" class="form-control mt-3" id="phoneno" name="phoneno" placeholder="Phone Number">
-                <input type="text" class="form-control mt-3" id="email" name="email" placeholder="Your Email">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <div class="checkbox mt-3">
-                      <label><input type="checkbox" name="remember"> I do accept the Terms and Conditions of your site.</label>
-                    </div>
-                </div>
-                <input type="submit" class="form-control mt-2 mb-5" value="Register Badge" style="border-radius: 10px ;">
+            <form  form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+            <div class="form-group">
+                <input type="text" class="form-control mt-3" id="street" name="street"  placeholder="Street" ngModel required>
             </div>
+            <div class="form-group">
+                <input type="text" class="form-control mt-3" id="info" name="info"  placeholder="Additional Information" ngModel required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mt-3" id="pincode" name="pincode" placeholder="Pin Code" ngModel required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mt-3" id="place" name="place" placeholder="Place" ngModel ngModel required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mt-3" id="country" name="country" placeholder="Country" ngMode requiredl>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mt-3" id="phoneno" name="phoneno" placeholder="Phone Number" ngModel required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mt-3" id="email" name="email" placeholder="Your Email" ngModel email required>
+            </div>
+            <div class=" from-froup col-sm-offset-2 col-sm-10">
+                <div class="checkbox mt-3">
+                    <label><input type="checkbox" name="remember" ngModel required> I do accept the Terms and Conditions of your site.</label>
+                </div>
+            </div>
+            <button type="submit" [disabled]="!myForm.valid" class="form-control mt-2 mb-5"  style="border-radius: 20px ;">Register Badge</button>
             </form>
         </div>
     </div>

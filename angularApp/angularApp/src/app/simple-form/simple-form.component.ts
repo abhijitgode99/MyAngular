@@ -14,6 +14,6 @@ export class SimpleFormComponent implements OnInit {
   }
 
   OnSubmit(form: NgForm) {
-    console.log('form submitted', form.value);
+    console.log('form submitted', form);
   }
 }
