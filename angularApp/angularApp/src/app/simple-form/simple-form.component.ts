@@ -8,12 +8,20 @@ import { NgForm } from '@angular/forms';
 })
 export class SimpleFormComponent implements OnInit {
 
+  
+  username = '';
+  defaultCourseValue = 'JavaScript';
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  OnSubmit(form: NgForm) {
+OnSubmit(form: NgForm) {
     console.log('form submitted', form);
+    let email = form.value.email;
+    console.log('Email is', email);
+    let country = form.value.address.country;
+    console.log('user input country name is', country)
   }
 }
