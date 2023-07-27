@@ -7,10 +7,10 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./simple-form.component.css']
 })
 export class SimpleFormComponent implements OnInit {
-
+  isCorrect=true;
   isFormSubmitted=false;
   username = '';
-  defaultCourseValue = 'JavaScript';
+  defaultCourseValue ='JavaScript';
   genders = [
     { id: '1', value: 'Male'},
     { id: '2', value: 'Female'},
@@ -29,7 +29,12 @@ export class SimpleFormComponent implements OnInit {
 
   ngOnInit() {  
   }
-
+  
+  checkDomain(inputValue){
+    console.log('inputvalue',inputValue)
+    this.isCorrect=inputValue.includes('codemindtechnology.com');
+    console.log(this.isCorrect)
+  }
 OnSubmit(form: NgForm) {
   this.isFormSubmitted=true;
     console.log('form submitted', form);
@@ -45,8 +50,14 @@ OnSubmit(form: NgForm) {
     this.formData.country = form.value.address.country;
     this.formData.state = form.value.address.state;
     this.formData.gender = form.value.gender;
+    
     // reser the form controls
     form.reset();
-    this.defaultCourseValue = 'JavaScript';
+    this.defaultCourseValue='JavaScript';
   }
+ 
 }
+function checkDomain(event: Event) {
+  throw new Error('Function not implemented.');
+}
+
