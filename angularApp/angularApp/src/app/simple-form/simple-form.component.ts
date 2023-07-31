@@ -30,10 +30,26 @@ export class SimpleFormComponent implements OnInit {
   ngOnInit() {  
   }
   
-  checkDomain(inputValue){
-    console.log('inputvalue',inputValue)
-    this.isCorrect=inputValue.includes('codemindtechnology.com');
-    console.log(this.isCorrect)
+  // checkDomain(inputValue){
+  //   console.log('inputvalue',inputValue)
+  //   this.isCorrect=inputValue.includes('codemindtechnology.com');
+  //   console.log(this.isCorrect)
+  // }
+  checkDomain(inputValue) {
+    console.log(inputValue);
+
+    const domain = inputValue.substring(inputValue.lastIndexOf('@') + 1);
+    console.log('domain ',domain);
+
+    if(domain == 'codemindtechnology.com') 
+    {
+      // false
+      this.isCorrect = false;
+    }
+    else {
+      // true
+      this.isCorrect = true;
+    }
   }
 OnSubmit(form: NgForm) {
   this.isFormSubmitted=true;
@@ -53,9 +69,10 @@ OnSubmit(form: NgForm) {
     
     // reser the form controls
     form.reset();
-    this.defaultCourseValue='JavaScript';
+    form.controls['course'].setValue('javaScript')
+  // objaddress.controls['country'].patchValue('India');
   }
- 
+
 }
 function checkDomain(event: Event) {
   throw new Error('Function not implemented.');
