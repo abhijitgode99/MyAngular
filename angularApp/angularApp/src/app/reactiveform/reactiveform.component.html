@@ -3,21 +3,30 @@
     <div class="row justify-content-center">
         <div class="col-md-6 text-left rounded shadow py-5">
             <form [formGroup]="myForm" (ngSubmit)="OnSubmit()">
+                <div formGroupName="userDetails">
                 <div class="form-group">
                     <label for="username">UserName</label>
                     <input type="text" class="form-control" formControlName="username" placeholder="Please enter name">
+                    <small class="text-danger" *ngIf="!myForm.get('userDetails.username').valid && myForm.get('userDetails.username').touched">User name required *</small>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="text" class="form-control" formControlName="email" placeholder="Please enter email address">
+                    <small class="text-danger" *ngIf="!myForm.get('userDetails.email').valid && myForm.get('userDetails.email').touched">plase enter valid email address*</small>
                 </div>
+            </div>
                 <div class="form-group mt-2">
                     <select formControlName="course" class="form-control" name="course" id="course" [ngModel]="defaultCourseValue">
                         <option value="Angular">Angular</option>
                         <option value="JavaScript">JavaScript</option>
                         <option value="TypeScript">TypeScript</option>
-                     
                     </select>
+                </div>
+                <div class="form-group">
+                    <div *ngFor="let gender of genders" class="custom-control custom-radio">
+                        <input class="custom-control-input" type="radio" formControlName="gender" value="{{gender.value}}" id="{{gender.id}}">
+                        <label for="{{gender.id}}">{{gender.value}}</label>
+                    </div>
                 </div>
                 <button type="submit"  class="btn btn-success mt-2">Submit</button>
             </form>
