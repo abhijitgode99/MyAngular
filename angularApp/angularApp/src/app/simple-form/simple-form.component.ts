@@ -6,16 +6,16 @@ import { NgForm } from '@angular/forms';
   templateUrl: './simple-form.component.html',
   styleUrls: ['./simple-form.component.css']
 })
-export class SimpleFormComponent implements OnInit {
-  isCorrect=true;
-  isFormSubmitted=false;
-  username = '';
-  defaultCourseValue ='JavaScript';
-  genders = [
-    { id: '1', value: 'Male'},
-    { id: '2', value: 'Female'},
-  ]
-
+export class SimpleFormComponent implements OnInit {                                
+  isCorrect=false;                                                    
+  isFormSubmitted=false;                                               
+  username = '';                                                     
+  defaultCourseValue ='JavaScript';                                           
+  genders = [                                                  
+    { id: '1', value: 'Male'},                                              
+    { id: '2', value: 'Female'},                     
+  ]                                                     
+                                                           
   formData = {
     username: '',
     email: '',
@@ -41,7 +41,7 @@ export class SimpleFormComponent implements OnInit {
     const domain = inputValue.substring(inputValue.lastIndexOf('@') + 1);
     console.log('domain ',domain);
 
-    if(domain == 'codemindtechnology.com') 
+    if(domain == 'codemind.com') 
     {
       // false
       this.isCorrect = false;

@@ -1,21 +1,19 @@
 <p>simple-form works!</p>
 <div class="container">
     <div class="row justify-content-center">
-        
         <div class="col-md-6 text-left rounded shadow py-5">   
             <div class="row justify-content-center"> Login Form</div>    
         <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
              <div class="form-group">
                 <label for="username">UserName</label>
-                <input type="text" class="form-control" id="username" name="username" [(ngModel)]="username" ngModel placeholder="Enter username " required>
+                  <input type="text" class="form-control" id="username" name="username" [(ngModel)]="username" ngModel placeholder="Enter username " required>
                 <small *ngIf="username">User name is : {{username}}</small>
              </div> 
              <div class="form-group">
                 <label for="email">Email</label>
                 <input type="text" class="form-control" (blur)="checkDomain($event.target.value)" #email="ngModel" id="email" name="email" ngModel placeholder="Enter email address" email required>
-                <small class="text-danger" *ngIf="email.touched && !email.valid && !isCorrect">Please enter valid email</small><br>
-                <small class="text-danger" *ngIf="!isCorrect">Domain Should be codemindtechnology.com</small>
-                
+                <small class="text-danger" *ngIf="email.touched && !email.valid">Please enter valid email</small><br>
+                <small class="text-danger" *ngIf="isCorrect">Domain Should be codemind.com</small>
             </div>
              <div class="form-group">
                 <label for="course"></label>
@@ -56,6 +54,6 @@
               <p>Gender: <strong>{{formData.gender}}</strong></p>
             </div>
         </form>
-    </div>
+      </div>
     </div>
 </div> 
