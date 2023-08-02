@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactiveform',
@@ -7,7 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reactiveform.component.css']
 })
 export class ReactiveformComponent implements OnInit {
-
+  isFormSubmitted: boolean = false;
   genders = [
     {id: '1', value: 'Male'},
     {id: '2', value: 'Female'}
@@ -27,11 +27,19 @@ export class ReactiveformComponent implements OnInit {
         'email': new FormControl(null,[Validators.required, Validators.email] )
       }),     
       'course': new FormControl('Angular'),
-      'gender': new FormControl('Male')
+      'gender': new FormControl('Male'),
+      'skills': new FormArray([ new FormControl('Angular8', Validators.required)])
     })
   }
-
-  OnSubmit() {
+  OnSubmit() { 
+    this.isFormSubmitted=true;
     console.log('Submit method called', this.myForm);
+    console.log('form value', this.myForm.value);
+  }
+  OnAddSkills() {
+    (<FormArray>this.myForm.get('skills')).push(new FormControl('', Validators.required))
+  }
+  OnRemoveSkills() {
+    (<FormArray>this.myForm.get('skills')).removeAt((<FormArray>this.myForm.get('skills')).length-1);
   }
 }
