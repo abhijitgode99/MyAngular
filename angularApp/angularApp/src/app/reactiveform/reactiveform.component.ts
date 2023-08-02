@@ -7,6 +7,7 @@ import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reactiveform.component.css']
 })
 export class ReactiveformComponent implements OnInit {
+  isAdded=false;
   isFormSubmitted: boolean = false;
   genders = [
     {id: '1', value: 'Male'},
@@ -19,7 +20,6 @@ export class ReactiveformComponent implements OnInit {
 
   ngOnInit() {
   }
-
   createForm() {
     this.myForm = new FormGroup({
       'userDetails': new FormGroup({
@@ -35,11 +35,18 @@ export class ReactiveformComponent implements OnInit {
     this.isFormSubmitted=true;
     console.log('Submit method called', this.myForm);
     console.log('form value', this.myForm.value);
+    console.log();
   }
   OnAddSkills() {
     (<FormArray>this.myForm.get('skills')).push(new FormControl('', Validators.required))
+    if(this.myForm.value.skills.length==2){
+      this.isAdded=true;
+    }
   }
-  OnRemoveSkills() {
+  OnRemoveSkills(){
     (<FormArray>this.myForm.get('skills')).removeAt((<FormArray>this.myForm.get('skills')).length-1);
+    if(this.myForm.value.skills.length==1){
+      this.isAdded=false;
+    }
   }
-}
+}                                                         

@@ -31,12 +31,12 @@
                 <div class="form-group" formArrayName="skills">
                     <label> Skills</label>
                 <ng-container *ngFor="let skill of myForm.get('skills').controls; index as i">
-                    <input type="text" class="form-control" formControlName="{{i}}"  placeholder="Add skills">
+                    <input type="text" class="form-control mt-1" formControlName="{{i}}"  placeholder="Add skills">
                 </ng-container>
                 <button class="btn btn-light btn-sm mt-4 btn-add" (click)="OnAddSkills()"><i>+</i> Add Skills</button>      
-                <button class="btn btn-light btn-sm mt-4 btn-rem" (click)="OnRemoveSkills()"><i>-</i> Remove Skills</button>          
+                <button *ngIf="isAdded" class="btn btn-light btn-sm mt-4 btn-rem" (click)="OnRemoveSkills()"><i>-</i> Remove Skills</button>          
                 </div>
-                <button type="submit"  class="btn btn-success mt-2">Submit</button>
+                 <button type="submit"  class="btn btn-success mt-2">Submit</button>
                 <div class="row justify-content-center mt-2" *ngIf="isFormSubmitted">
                     <h2 class="text-center">Form Data</h2>
                     <p>UserName: <strong>{{myForm.get('userDetails.username').value}}</strong></p>
