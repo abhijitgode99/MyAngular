@@ -34,7 +34,7 @@
                     <input type="text" class="form-control mt-1" formControlName="{{i}}"  placeholder="Add skills">
                 </ng-container>
                 <button class="btn btn-light btn-sm mt-4 btn-add" (click)="OnAddSkills()"><i>+</i> Add Skills</button>      
-                <button *ngIf="isAdded" class="btn btn-light btn-sm mt-4 btn-rem" (click)="OnRemoveSkills()"><i>-</i> Remove Skills</button>          
+                <button *ngIf="isAdded" class="btn btn-light btn-sm mt-4 btn-rem" (click)="OnRemoveSkills(i)"><i>-</i> Remove Skills</button>          
                 </div>
                  <button type="submit"  class="btn btn-success mt-2">Submit</button>
                 <div class="row justify-content-center mt-2" *ngIf="isFormSubmitted">
