@@ -7,12 +7,23 @@
                 <div class="form-group">
                     <label for="username">UserName</label>
                     <input type="te xt" class="form-control" formControlName="username" placeholder="Please enter name">
-                    <small class="text-danger" *ngIf="!myForm.get('userDetails.username').valid && myForm.get('userDetails.username').touched">User name required *</small>
+                    <small class="text-danger" *ngIf="!myForm.get('userDetails.username').valid && 
+                    myForm.get('userDetails.username').touched">
+
+                    <span class="text-danger" *ngIf="myForm.get('userDetails.username').errors['required']">User name required *</span>
+
+                    <span class="text-danger" *ngIf="myForm.get('userDetails.username').errors['namesIsNotAllowed']">That username is taken. Try another.</span>
+                    </small>
                 </div>
                 <div class="form-group">        
                     <label for="email">Email</label>
                     <input type="text" class="form-control" formControlName="email" placeholder="Please enter email address">
-                    <small class="text-danger" *ngIf="!myForm.get('userDetails.email').valid && myForm.get('userDetails.email').touched">plase enter valid email address*</small>
+                    <small class="text-danger" *ngIf="!myForm.get('userDetails.email').valid && myForm.get('userDetails.email').touched">
+
+                        <span class="text-danger" *ngIf="myForm.get('userDetails.email').errors['required']">User email is required *</span>
+
+                    <span class="text-danger" *ngIf="myForm.get('userDetails.email').errors['emailNotAllowed']">The email is taken, Try another.</span>
+                    </small>
                 </div>
             </div>
                 <div class="form-group mt-2">
