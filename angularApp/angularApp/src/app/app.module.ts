@@ -18,6 +18,8 @@ import { SimpleFormComponent } from './simple-form/simple-form.component';
 import { FormTaskComponent } from './form-task/form-task.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { TaskTempleteFormComponent } from './task-templete-form/task-templete-form.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { TaskTempleteFormComponent } from './task-templete-form/task-templete-fo
     SimpleFormComponent,
     FormTaskComponent,
     ReactiveformComponent,
-    TaskTempleteFormComponent
+    TaskTempleteFormComponent,
+    Comp1Component,
+    Comp2Component
   ],
   imports: [
     BrowserModule,

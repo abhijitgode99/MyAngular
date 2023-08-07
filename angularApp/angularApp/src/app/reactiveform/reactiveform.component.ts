@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactiveform',
@@ -10,29 +10,82 @@ export class ReactiveformComponent implements OnInit {
   isAdded=false;
   str :string= 'abhijit gode';
   isFormSubmitted: boolean = false;
-
+  myForm: FormGroup;
   notAllowedNames = ['Codemind', 'Technology'];
   
   genders = [
     {id: '1', value: 'Male'},
     {id: '2', value: 'Female'}
   ]
-  myForm: FormGroup;
-  constructor() { 
+
+  //
+  constructor(private fb: FormBuilder) { 
     this.createForm();
   }
 
-  ngOnInit() {
+  resetForm() {
+    this.myForm.reset({
+      'userDetails' : {
+        'username': '',
+        'email': ''
+      },
+      'course': 'Angular',
+      'gender': 'Male',
+      'skills': ['Angular']
+    });
   }
+
+ngOnInit() {
+//     setTimeout(() => {
+//       this.myForm.setValue({
+//         'userDetails' : {
+//           'username': 'Codemind1122',
+//           'email': 'codemind@outlook.com'
+//         },
+//         'course' : 'JavaScript',
+//         'gender': 'Female',
+//         'skills': ['Azure']
+//       })
+//   }, 5000
+// );
+
+  setTimeout(() => {
+    this.myForm.patchValue({
+      'userDetails' : {
+        'email': 'jack@gmail.com'
+      }
+    })
+  }, 5000)
+
+  }
+
   createForm() {
-    this.myForm = new FormGroup({
-      'userDetails': new FormGroup({
-        'username': new FormControl('', [Validators.required, this.NameNotAllowed.bind(this)]),
-        'email': new FormControl(null,[Validators.required, Validators.email], this.EmailNotAllowed )
-      }),     
-      'course': new FormControl('Angular'),
-      'gender': new FormControl('Male'),
-      'skills': new FormArray([ new FormControl('Angular8', Validators.required)])
+    // this.myForm = new FormGroup({
+    //   'userDetails': new FormGroup({
+    //     'username': new FormControl('', [Validators.required, this.NameNotAllowed.bind(this)]),
+    //     'email': new FormControl(null,[Validators.required, Validators.email], this.EmailNotAllowed )
+    //   }),     
+    //   'course': new FormControl('Angular'),
+    //   'gender': new FormControl('Male'),
+    //   'skills': new FormArray([ new FormControl('Angular8', Validators.required)])
+    // })
+
+    this.myForm = this.fb.group({
+
+      userDetails: this.fb.group({
+  
+        username : ['', [Validators.required, this.NameNotAllowed.bind(this)]],
+  
+        email: ['', [Validators.required, Validators.email], this.EmailNotAllowed ]
+  
+      }),
+  
+      course: ['Angular'],
+  
+      gender: ['Male'],
+  
+      skills: this.fb.array([''])
+  
     })
   }
 
@@ -41,6 +94,8 @@ export class ReactiveformComponent implements OnInit {
     console.log('Submit method called', this.myForm);
     console.log('form value', this.myForm.value);
     console.log();
+
+    this.resetForm()
   }
 
   OnAddSkills() {
