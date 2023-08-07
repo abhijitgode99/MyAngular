@@ -1,0 +1,15 @@
+<h1 class="text-center">component 2</h1>
+<div class="container mt-3" style="background-color:rgb(167, 215, 218)">
+    <div class="row justify-content-center pt-5 pb-5">
+        <div class="col-sm-4" style="background-color:white;">
+            <form (ngSubmit)="calculate(myForm)" #myForm="ngForm">
+                <div class="form-group">
+                    <label for="dob">Date of Birth :</label>
+                    <input class="form-control mt-2" type="date" name="dob" (ngModel)="ageIs" ngModel required>
+                    <input class="btn btn-success mt-2 mb-2 text-center" width="500px" type="submit" value="Calulate">
+                    <h3 class="mt-2" *ngIf="diplay">your age is {{ageIs}}</h3>
+                </div>
+            </form>
+         </div>
+    </div>
+</div>  
