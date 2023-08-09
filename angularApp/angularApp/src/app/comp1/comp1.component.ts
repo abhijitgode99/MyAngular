@@ -10,6 +10,7 @@ import { UserService } from '../Services/user.service';
 
 export class Comp1Component implements OnInit {
   products = {};
+  newArray:any =[];
   constructor(private objService :Service1Service, private objUser: UserService) { 
     //const objService = new Service1Service();
     this.products = objService.products;
@@ -18,8 +19,9 @@ export class Comp1Component implements OnInit {
   ngOnInit() {
     var obj = this.objUser.getUsers();
     obj.subscribe(res=> {
-    console.log(res)
+    console.log(res);
+    this.newArray=res;
+    console.log(this.newArray[0].address.street)
    })
   }
-
 }
