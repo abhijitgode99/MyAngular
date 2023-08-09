@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Service1Service } from '../Services/service1.service';
+import { UserService } from '../Services/user.service';
 
 @Component({
   selector: 'app-comp1',
@@ -9,12 +10,16 @@ import { Service1Service } from '../Services/service1.service';
 
 export class Comp1Component implements OnInit {
   products = {};
-  constructor() { 
-    const objService = new Service1Service();
+  constructor(private objService :Service1Service, private objUser: UserService) { 
+    //const objService = new Service1Service();
     this.products = objService.products;
   }
 
   ngOnInit() {
+    var obj = this.objUser.getUsers();
+    obj.subscribe(res=> {
+    console.log(res)
+   })
   }
 
 }

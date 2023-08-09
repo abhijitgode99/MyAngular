@@ -17,12 +17,12 @@ export class ServiceTask1Component implements OnInit {
   }
 
   calculate(form: NgForm){
-    console.log(form)
+    //console.log(form)
     this.DOB=form.value.dob;
 
     const objService = new Service1Service();
     this.ageIs = objService.caluclateAge(this.DOB);
-    console.log('your age',this.ageIs)
+    //console.log('your age',this.ageIs)
     this.diplay=true;
   }
 }
