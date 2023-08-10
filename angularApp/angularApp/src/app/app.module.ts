@@ -23,6 +23,7 @@ import { Comp2Component } from './comp2/comp2.component';
 import { ServiceTask1Component } from './service-task1/service-task1.component';
 import { ServiceTask2Component } from './service-task2/service-task2.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PracticeComponent } from './practice/practice.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { HttpClientModule } from '@angular/common/http';
     Comp1Component,
     Comp2Component,
     ServiceTask1Component,
-    ServiceTask2Component
+    ServiceTask2Component,
+    PracticeComponent
   ],
   imports: [
     BrowserModule,
