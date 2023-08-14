@@ -6,12 +6,10 @@
                 <div formGroupName="userDetails">
                 <div class="form-group">
                     <label for="username">UserName</label>
-                    <input type="te xt" class="form-control" formControlName="username" placeholder="Please enter name">
+                    <input type="text" class="form-control" formControlName="username" placeholder="Please enter name">
                     <small class="text-danger" *ngIf="!myForm.get('userDetails.username').valid && 
                     myForm.get('userDetails.username').touched">
-
                     <span class="text-danger" *ngIf="myForm.get('userDetails.username').errors['required']">User name required *</span>
-
                     <span class="text-danger" *ngIf="myForm.get('userDetails.username').errors['namesIsNotAllowed']">That username is taken. Try another.</span>
                     </small>
                 </div>

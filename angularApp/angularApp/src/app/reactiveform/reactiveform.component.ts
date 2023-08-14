@@ -67,7 +67,7 @@ ngOnInit() {
     //   }),     
     //   'course': new FormControl('Angular'),
     //   'gender': new FormControl('Male'),
-    //   'skills': new FormArray([ new FormControl('Angular8', Validators.required)])
+    //   'skills': new FormArray([new FormControl('Angular8', Validators.required)])
     // })
 
     this.myForm = this.fb.group({

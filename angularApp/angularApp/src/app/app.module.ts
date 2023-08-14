@@ -24,6 +24,7 @@ import { ServiceTask1Component } from './service-task1/service-task1.component';
 import { ServiceTask2Component } from './service-task2/service-task2.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PracticeComponent } from './practice/practice.component';
+import { TaskReactiveFormComponent } from './task-reactive-form/task-reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { PracticeComponent } from './practice/practice.component';
     Comp2Component,
     ServiceTask1Component,
     ServiceTask2Component,
-    PracticeComponent
+    PracticeComponent,
+    TaskReactiveFormComponent
   ],
   imports: [
     BrowserModule,

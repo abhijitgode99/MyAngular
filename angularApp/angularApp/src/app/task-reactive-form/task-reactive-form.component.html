@@ -1,0 +1,31 @@
+<p>task-reactive-form works!</p>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-6 rounded" style="background-color:rgb(230, 184, 98)">
+            <h1 class="text-center">Assignment</h1>
+            <form [formGroup]="myForm" (ngSubmit)="OnSubmit()">
+                <!-- <div formGroupName="userDetails"> -->
+                    <div class="form-group">
+                        <label for="projectname"><strong>Project Name :</strong> </label>
+                        <input type="text" class="form-control mt-2 mb-2" formControlName="projectname" placeholder="Enter Project Name">
+                    </div>
+                    <div class="form-group">        
+                        <label for="email"><strong>Email :</strong></label>
+                        <input type="text" class="form-control mt-2 mb-2" formControlName="email" placeholder="Please enter email address" >
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group mt-2">
+                            <label for="status"><strong>Status :</strong></label>
+                                <select formControlName="course" class="form-control mt-2 mb-2" name="status" id="status" [ngModel]="defaultCourseValue">
+                                <option value="Stable">Stable</option>
+                                <option value="Critical">Critical</option>
+                                <option value="Finished">Finished</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit"  class="btn btn-success mt-2 mt-2 mb-2">Submit</button>
+                <!-- </div> -->
+            </form>
+        </div>
+    </div>
+</div> 
