@@ -86,7 +86,6 @@ ngOnInit() {
     console.log('Submit method called', this.myForm);
     console.log('form value', this.myForm.value);
     console.log();
-
     this.resetForm()
   }
 

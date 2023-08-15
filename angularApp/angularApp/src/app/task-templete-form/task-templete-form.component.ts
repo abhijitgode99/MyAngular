@@ -30,7 +30,8 @@ export class TaskTempleteFormComponent implements OnInit {
 
   ngOnInit() {
   }
-  OnSubmit(form: NgForm) {
+  OnSubmit(form: NgForm) { 
+      
       console.log('form submitted', form);
       
   }

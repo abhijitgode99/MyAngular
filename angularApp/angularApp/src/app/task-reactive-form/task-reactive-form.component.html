@@ -1,31 +1,46 @@
 <p>task-reactive-form works!</p>
-<div class="container">
+
+<!-- style="background-image: url('https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg');width:1500px;height: 1500;" -->
+<div class="container" >
     <div class="row justify-content-center">
-        <div class="col-sm-6 rounded" style="background-color:rgb(230, 184, 98)">
+        <div class="col-sm-6 rounded mt-5" id="flag">
             <h1 class="text-center">Assignment</h1>
             <form [formGroup]="myForm" (ngSubmit)="OnSubmit()">
                 <!-- <div formGroupName="userDetails"> -->
                     <div class="form-group">
                         <label for="projectname"><strong>Project Name :</strong> </label>
-                        <input type="text" class="form-control mt-2 mb-2" formControlName="projectname" placeholder="Enter Project Name">
+                        <input type="text" class="form-control mt-2" formControlName="projectname" placeholder="Enter Project Name">
+                        <small class="text-danger" *ngIf="!myForm.get('projectname').valid && 
+                         myForm.get('projectname').touched"><span class="text-danger" *ngIf="myForm.get('projectname').errors['required']"><strong>Project name is required*</strong></span>
+                        <span class="text-danger" *ngIf="myForm.get('projectname').errors['namesIsNotAllowed']"><strong>Project name "Test" is not allowed. Try another.</strong></span>
+                    </small>
                     </div>
-                    <div class="form-group">        
+                    <div class="form-group mt-2">        
                         <label for="email"><strong>Email :</strong></label>
                         <input type="text" class="form-control mt-2 mb-2" formControlName="email" placeholder="Please enter email address" >
+                        <small class="text-danger" *ngIf="!myForm.get('email').valid && 
+                         myForm.get('email').touched"><span class="text-danger" *ngIf="myForm.get('email').errors['required']"><strong>email is required*</strong></span>
+                        <!-- <span class="text-danger" *ngIf="myForm.get('projectname').errors['namesIsNotAllowed']"><strong>Project name "Test" is not allowed. Try another.</strong></span> -->
+                    </small>
                     </div>
-                    <div class="form-group">
                         <div class="form-group mt-2">
                             <label for="status"><strong>Status :</strong></label>
-                                <select formControlName="course" class="form-control mt-2 mb-2" name="status" id="status" [ngModel]="defaultCourseValue">
+                                <select formControlName="status" class="form-control mt-2 mb-2" id="status" [ngModel]="defaultCourseValue">
                                 <option value="Stable">Stable</option>
                                 <option value="Critical">Critical</option>
                                 <option value="Finished">Finished</option>
                             </select>
                         </div>
-                    </div>
                     <button type="submit"  class="btn btn-success mt-2 mt-2 mb-2">Submit</button>
+                    
                 <!-- </div> -->
             </form>
+            <div class=" row justify-content-center mt-2" *ngIf="isFormSubmitted" id="display">
+                <h2 class="text-center">Form Data</h2>
+                <p>Project Name: <strong>{{myForm.get('projectname').value}}</strong></p>
+                <p>Email: <strong>{{myForm.get('email').value}}</strong></p>
+                <p>Status: <strong>{{myForm.get('status').value}}</strong></p>                       
+            </div>
         </div>
     </div>
 </div> 
