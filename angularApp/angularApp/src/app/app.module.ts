@@ -25,6 +25,10 @@ import { ServiceTask2Component } from './service-task2/service-task2.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PracticeComponent } from './practice/practice.component';
 import { TaskReactiveFormComponent } from './task-reactive-form/task-reactive-form.component';
+import { PipedemoComponent } from './pipedemo/pipedemo.component';
+import { CountPipe } from './count.pipe';
+import { FilterPipe } from './filter.pipe';
+import { FilterpipeComponent } from './filterpipe/filterpipe.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +52,11 @@ import { TaskReactiveFormComponent } from './task-reactive-form/task-reactive-fo
     ServiceTask1Component,
     ServiceTask2Component,
     PracticeComponent,
-    TaskReactiveFormComponent
+    TaskReactiveFormComponent,
+    PipedemoComponent,
+    CountPipe,
+    FilterPipe,
+    FilterpipeComponent
   ],
   imports: [
     BrowserModule,
