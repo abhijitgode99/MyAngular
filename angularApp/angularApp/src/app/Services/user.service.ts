@@ -7,9 +7,11 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
   url = 'https://jsonplaceholder.typicode.com/users'; // API End Point
+
   // Inject this httpclient
   constructor(private httpClient: HttpClient) { }
   getUsers() {
    return this.httpClient.get(this.url);
   }
+
 };                                   

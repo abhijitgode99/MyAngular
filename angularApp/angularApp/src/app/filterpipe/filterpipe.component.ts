@@ -37,9 +37,11 @@ export class FilterpipeComponent implements OnInit {
 
     }
   ]
+  
   constructor() { }
 
   ngOnInit() {
+    console.log(this.prodcutArr)
   }
 
 }
