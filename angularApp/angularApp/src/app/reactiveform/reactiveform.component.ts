@@ -73,7 +73,7 @@ ngOnInit() {
     this.myForm = this.fb.group({
       userDetails: this.fb.group({
         username : ['', [Validators.required, this.NameNotAllowed.bind(this)]],
-        email: ['', [Validators.required, Validators.email], this.EmailNotAllowed ]  
+        email : ['', [Validators.required, Validators.email], this.EmailNotAllowed ]  
       }),
       course: ['Angular'],
       gender: ['Male'],

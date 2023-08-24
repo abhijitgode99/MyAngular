@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../Services/user.service';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-user',
@@ -17,6 +18,9 @@ export class UserComponent implements OnInit {
     obj.subscribe(res=> {
     // console.log(res);
     this.newArray=res;
+    this.newArray=this.newArray.map((element)=>{
+      return element;;
+    });
     // console.log(this.newArray[0].address.street)
     // console.log(this.newArray)
    })

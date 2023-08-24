@@ -20,7 +20,7 @@
             </thead>
             <tbody>
                 <!-- | filterUser:nameSerach -->
-                <tr *ngFor="let value of newArray ">
+                <tr *ngFor="let value of newArray | filterUser:nameSerach ">
                    <td > {{value.id}}</td>
                    <td> {{value.name}}</td>
                    <td> {{value.username}}</td>

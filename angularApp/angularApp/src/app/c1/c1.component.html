@@ -1,0 +1,24 @@
+<!-- <p>c1 works!</p>
+
+<div class="box" >
+    User Name : <strong>{{userName}}</strong>
+    <br><br>
+    <input type="text"  placeholder="Update name" #uname>
+    <button class="btn btn-primary" (click)="updateUserName(uname)">Update</button>
+</div> -->
+
+<form [formGroup]="myGroup" (ngSubmit)="OnSubmit()" class="mt-4 mb-4">
+        <div class="form-group">
+            <label for="fname">First Name :<strong>{{fname}}</strong></label>
+            <input type="text" class="form-control" formControlName="fname" placeholder="Enter fist name" >
+        </div>
+        <div class="form-group">
+            <label for="mname">Middle Name :<strong>{{mname}}</strong></label>
+            <input type="text" class="form-control" formControlName="mname" placeholder="Enter middle name">
+        </div>
+        <div class="form-group">
+            <label for="lname">Last Name :<strong>{{lname}}</strong></label>
+            <input type="text" class="form-control" formControlName="lname" placeholder="Enter last name">
+        </div>
+        <button type="submit"  class="btn btn-success mt-2">Submit</button>
+</form>
