@@ -31,6 +31,10 @@ import { FilterPipe } from './filter.pipe';
 import { FilterpipeComponent } from './filterpipe/filterpipe.component';
 import { UserComponent } from './user/user.component';
 import { FilterUserPipe } from './filter-user.pipe';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +64,11 @@ import { FilterUserPipe } from './filter-user.pipe';
     FilterPipe,
     FilterpipeComponent,
     UserComponent,
-    FilterUserPipe
+    FilterUserPipe,
+    LoginComponent,
+    HomeComponent,
+    AboutusComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
