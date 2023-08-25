@@ -1,0 +1,38 @@
+<!-- <p >{{laptop.brand}}</p> -->
+<!-- <div *ngFor="let laptop of objLaptop">
+    {{laptop.src}}
+    {{laptop.brand}}
+    <img width="50" height="50" [src]="laptop.imgUrl" alt="">
+</div> -->
+<div class="sroll-bar">
+<div class="row mt-4" style="overflow-y: scroll; max-height: 1000px;">
+    <div class="bg col-md-6" *ngFor="let laptop of objLaptop" >
+        
+        <div class="card mx-2 my-2" >   
+            <img class="mx-2 my-2" width="390px" height="390px" [src]="laptop.imgUrl" alt="">
+             <li>brand:<strong>{{laptop.brand}} </strong></li> 
+             <li>model:<strong>{{laptop.model}} </strong></li>  
+             <li>processor:<strong>{{laptop.processor}} </strong></li>  
+             <li>ram:<strong>{{laptop.ram}} </strong></li>  
+             <li>storage:<strong>{{laptop.storage}} </strong></li>  
+             <li>graphics:<strong>{{laptop.graphics}} </strong></li>  
+             <li>display_size:<strong>{{laptop.display_size}} </strong></li>      
+             <li>display_resolution:<strong>{{laptop.display_resolution}} </strong></li>  
+             <li>weight:<strong>{{laptop.weight}} </strong></li>  
+             <li>price:<strong>{{laptop.price}} </strong></li>  
+             <button class="btn btn-primary" >Buy</button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- "src:"../../assets/images/dell-1.jpg",
+      "brand": "Dell",
+      "model": "XPS 13",
+      "processor": "Intel Core i7-1165G7",
+      "ram": "16GB LPDDR4X",
+      "storage": "512GB NVMe SSD",
+      "graphics": "Intel Iris Xe",
+      "display_size": "13.4 inches",
+      "display_resolution": "3840 x 2400",
+      "weight": "2.8 lbs",
+      "price": "$1299.99" -->

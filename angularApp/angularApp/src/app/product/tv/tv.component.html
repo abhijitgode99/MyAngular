@@ -1,0 +1,25 @@
+<p>tv works!</p>
+<div class="sroll-bar">
+    <div class="row mt-4" style="overflow-y: scroll; max-height: 1000px;">
+        <div class="bg col-md-6" *ngFor="let tv of tvs" >
+            
+            <div class="card mx-2 my-2" >   
+                <img class="mx-2 my-2" width="390px" height="390px" [src]="tv.imgUrl" alt="">
+                 <li>brand:<strong>{{tv.brand}} </strong></li> 
+                 <li>model:<strong>{{tv.model}} </strong></li>  
+                 <li>display_size:<strong>{{tv.display_size}} </strong></li>  
+                 <li>display_resolution:<strong>{{tv.display_resolution}} </strong></li>  
+                 <li>smart:<strong>{{tv.storage}} </strong></li>  
+                 <li>price:<strong>{{tv.price}} </strong></li>  
+                 <button class="btn btn-primary" >Buy</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+    brand: "Samsung",
+      model: "QLED Q80A",
+      display_size: "65 inches",
+      display_resolution: "4K Ultra HD",
+      smart: true,
+      price: "$1499" -->

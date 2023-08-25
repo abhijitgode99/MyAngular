@@ -4,13 +4,28 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProductComponent } from './product/product.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { TvComponent } from './product/tv/tv.component';
+import { TabletComponent } from './product/tablet/tablet.component';
+import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
 
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent}, // localhost:4200/login
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: 'login', component: LoginComponent}, // localhost:4200/login
   {path: 'home', component: HomeComponent},
   {path: 'aboutus', component: AboutusComponent},
-  {path: 'contactus', component: ContactusComponent}
+  {path: 'contactus', component: ContactusComponent},
+  {path: 'product', component: ProductComponent ,children: [          //for multiple router outlet
+    // { path: '', component: ProductComponent}, // localhost:4200/product/laptop   **for single router outlet
+    {path: 'laptop', component: LaptopComponent},
+    { path: 'tv', component: TvComponent}, 
+    {path: 'tablet', component: TabletComponent},
+    {path: 'washingmachine', component: WashingmachineComponent}
+  ] },
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
