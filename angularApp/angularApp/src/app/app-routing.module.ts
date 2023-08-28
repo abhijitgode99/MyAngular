@@ -10,6 +10,8 @@ import { LaptopComponent } from './product/laptop/laptop.component';
 import { TvComponent } from './product/tv/tv.component';
 import { TabletComponent } from './product/tablet/tablet.component';
 import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
+import { PostComponent } from './post/post.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
 
 
 const routes: Routes = [
@@ -25,7 +27,10 @@ const routes: Routes = [
     {path: 'tablet', component: TabletComponent},
     {path: 'washingmachine', component: WashingmachineComponent}
   ] },
+  {path: 'post', component: PostComponent},
+  {path: 'postdetails/:id', component: PostdetailsComponent},
   {path: '**', component: PageNotFoundComponent}
+
 ];
 
 @NgModule({

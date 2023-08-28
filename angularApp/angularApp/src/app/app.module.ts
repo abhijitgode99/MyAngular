@@ -45,6 +45,9 @@ import { LaptopComponent } from './product/laptop/laptop.component';
 import { TabletComponent } from './product/tablet/tablet.component';
 import { TvComponent } from './product/tv/tv.component';
 import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
+import { PostComponent } from './post/post.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
+
 
 @NgModule({
   declarations: [
@@ -88,7 +91,9 @@ import { WashingmachineComponent } from './product/washingmachine/washingmachine
     LaptopComponent,
     TabletComponent,
     TvComponent,
-    WashingmachineComponent
+    WashingmachineComponent,
+    PostComponent,
+    PostdetailsComponent
   ],
   imports: [
     BrowserModule,

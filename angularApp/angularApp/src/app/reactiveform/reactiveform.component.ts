@@ -69,7 +69,7 @@ ngOnInit() {
     //   'gender': new FormControl('Male'),
     //   'skills': new FormArray([new FormControl('Angular8', Validators.required)])
     // })
-
+ 
     this.myForm = this.fb.group({
       userDetails: this.fb.group({
         username : ['', [Validators.required, this.NameNotAllowed.bind(this)]],
