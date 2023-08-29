@@ -13,7 +13,6 @@ import { NgifComponent } from './ngif/ngif.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { NgSwitchCaseComponent } from './ng-switch-case/ng-switch-case.component';
 import { AttributeComponent } from './attribute/attribute.component';
-import { DirectiveDirective } from './directive.directive';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
 import { FormTaskComponent } from './form-task/form-task.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
@@ -40,13 +39,11 @@ import { C2Component } from './c2/c2.component';
 import { C3Component } from './c3/c3.component';
 import { C4Component } from './c4/c4.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProductComponent } from './product/product.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { TabletComponent } from './product/tablet/tablet.component';
-import { TvComponent } from './product/tv/tv.component';
-import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
 import { PostComponent } from './post/post.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { UltilityModule } from './ultility.module';
+
+
 
 
 @NgModule({
@@ -61,7 +58,6 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
     NgforComponent,
     NgSwitchCaseComponent,
     AttributeComponent,
-    DirectiveDirective,
     SimpleFormComponent,
     FormTaskComponent,
     ReactiveformComponent,
@@ -87,22 +83,24 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
     C3Component,
     C4Component,
     PageNotFoundComponent,
-    ProductComponent,
-    LaptopComponent,
-    TabletComponent,
-    TvComponent,
-    WashingmachineComponent,
     PostComponent,
-    PostdetailsComponent
+    PostdetailsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    UltilityModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  constructor() {
+    console.log('AppModule called');
+    
+  }
+}

@@ -1,0 +1,12 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let device of electronicDevices">
+            <div class="card mx-4 my-4" >
+                <img class="mx-2 my-2" width="300px" height="300px" [src]="device.imgUrl" alt="">
+                <h2>{{device.name}}</h2>
+                <button class="btn btn-primary">Go</button>
+            </div>
+        </div>
+    </div>
+</div>
