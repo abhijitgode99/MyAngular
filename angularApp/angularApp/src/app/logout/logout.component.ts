@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../Services/auth.service';
 
 @Component({
   selector: 'app-logout',
@@ -8,14 +9,24 @@ import { Router } from '@angular/router';
 })
 export class LogoutComponent implements OnInit {
 
-  constructor(private _route: Router) { 
-    
+  @Output() childButtonClicked: EventEmitter<void> = new EventEmitter<void>();
+  // @Output() valueSent: EventEmitter<string> = new EventEmitter<string>();
+
+  clearLocalStorage() {
+    this.childButtonClicked.emit();
+  }
+
+  //  username ;
+  //  key="username"
+  constructor(private _route: Router,private localStorageService: AuthService) { 
+
+    // this.username = this.localStorageService.getValue(this.key);
+    // this.valueSent.emit(this.username);
+    localStorage.removeItem("usrname");
+    this._route.navigate(['/login']);
   }
 
   ngOnInit() {
   }
-  clearLocalStorage() {
-    localStorage.clear();
-    // this._route.navigate(['/login']);
-  }
+
 }

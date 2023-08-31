@@ -5,8 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  constructor() { }
+  constructor() {
+    
+   }
 
+   getValue(key: string): string | null {
+    return localStorage.getItem(key);
+  }
 
   checkUserNameAndPass(username: string, pass: string) {
     if (username == 'admin' && pass == 'admin77') {
