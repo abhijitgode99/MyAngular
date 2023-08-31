@@ -42,6 +42,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PostComponent } from './post/post.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { UltilityModule } from './ultility.module';
+import { HookComponent } from './hook/hook.component';
+import { MenuBarComponent } from './menu-bar/menu-bar.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -85,6 +88,9 @@ import { UltilityModule } from './ultility.module';
     PageNotFoundComponent,
     PostComponent,
     PostdetailsComponent,
+    HookComponent,
+    MenuBarComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,

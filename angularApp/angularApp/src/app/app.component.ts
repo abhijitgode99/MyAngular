@@ -15,4 +15,9 @@ export class AppComponent {
   getDataFromChild(value) {
     console.log(value);   
    }
+
+   OnTextValuCHanges(val){
+    this.data = val.value;
+    alert(val.value);
+  }
 }

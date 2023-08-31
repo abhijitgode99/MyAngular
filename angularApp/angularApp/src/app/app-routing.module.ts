@@ -8,13 +8,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 import { PostComponent } from './post/post.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
-import { ElectronicsComponent } from './electronics/electronics.component';
+import { AuthgaurdGuard } from './AuthGuard/authguard.guard';
+import { LogoutComponent } from './logout/logout.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent}, // localhost:4200/login
-  {path: 'home', component: HomeComponent},
+  {path: 'home',canActivate:[AuthgaurdGuard], component: HomeComponent},
   {path: 'aboutus', component: AboutusComponent},
   {path: 'contactus', component: ContactusComponent},
   // {path: 'product', component: ProductComponent ,children: [          //for multiple router outlet
@@ -25,9 +26,10 @@ const routes: Routes = [
   //   {path: 'washingmachine', component: WashingmachineComponent}
   // ] },
   {path : 'electronics',loadChildren:'./electronics-model/electronics-model.module#ElectronicsModelModule'},
-  { path: 'product', loadChildren: './products/products.module#ProductsModule'},
+  { path: 'product',canActivate:[AuthgaurdGuard], loadChildren: './products/products.module#ProductsModule'},
   {path: 'post', component: PostComponent},
   {path: 'postdetails/:id', component: PostdetailsComponent},
+  {path: 'logout',component:LogoutComponent},
   {path: '**', component: PageNotFoundComponent}
 
 ];
