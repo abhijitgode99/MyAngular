@@ -10,6 +10,7 @@ import { PostComponent } from './post/post.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { AuthgaurdGuard } from './AuthGuard/authguard.guard';
 import { LogoutComponent } from './logout/logout.component';
+import { TodoComponent } from './todo/todo.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path: 'post', component: PostComponent},
   {path: 'postdetails/:id', component: PostdetailsComponent},
   {path: 'logout',component:LogoutComponent},
+  {path: 'todo', component: TodoComponent},
   {path: '**', component: PageNotFoundComponent}
 
 ];

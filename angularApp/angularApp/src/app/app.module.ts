@@ -45,6 +45,7 @@ import { UltilityModule } from './ultility.module';
 import { HookComponent } from './hook/hook.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { LogoutComponent } from './logout/logout.component';
+import { TodoComponent } from './todo/todo.component';
 
 
 
@@ -91,6 +92,7 @@ import { LogoutComponent } from './logout/logout.component';
     HookComponent,
     MenuBarComponent,
     LogoutComponent,
+    TodoComponent,
   ],
   imports: [
     BrowserModule,

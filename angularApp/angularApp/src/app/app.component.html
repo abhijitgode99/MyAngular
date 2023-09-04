@@ -110,13 +110,15 @@
       <li class="nav-item" id="logout">
         <a class="nav-link" routerLinkActive="active" routerLink="/logout" (click)="clearLocalStorage()">logout</a>
       </li>
-       
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/todo">Todo</a>
+      </li>
     </ul>
   </nav>
 </header>
 <!-- <app-electronics></app-electronics> -->
 
 <!-- <input type="text" (blur)="OnTextValuCHanges(val)" #val>
-<app-hook [fromParent]="data"></app-hook> -->
-
+<app-hook [fromParent]="data" *ngIf="isDestroy"><h1 #child>This is child content coming from parent component</h1></app-hook>
+<button class="btn btn-danger" (click)="OnDestroy()">OnDestroy</button> -->
 <router-outlet></router-outlet> 

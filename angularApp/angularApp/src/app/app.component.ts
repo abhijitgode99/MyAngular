@@ -10,8 +10,10 @@ export class AppComponent {
   title = 'angularApp';
   username : string='';
   key='username';
-  data: string = 'Angular Batch 7';
+  data: string = 'red';
 
+  isDestroy: boolean = true;
+  s
   course=['Angular','React','Java','Tesing','Devops'];
 
   // constructor(private localStorageService: AuthService){
@@ -31,5 +33,9 @@ export class AppComponent {
     localStorage.clear();
   }
 
- 
+  OnDestroy(){
+
+    this.isDestroy = false;
+
+  }
 }
