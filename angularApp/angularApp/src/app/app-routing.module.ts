@@ -11,6 +11,8 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { AuthgaurdGuard } from './AuthGuard/authguard.guard';
 import { LogoutComponent } from './logout/logout.component';
 import { TodoComponent } from './todo/todo.component';
+import { TodotaskComponent } from './todotask/todotask.component';
+import { RapidapiComponent } from './rapidapi/rapidapi.component';
 
 
 const routes: Routes = [
@@ -31,7 +33,9 @@ const routes: Routes = [
   {path: 'post', component: PostComponent},
   {path: 'postdetails/:id', component: PostdetailsComponent},
   {path: 'logout',component:LogoutComponent},
-  {path: 'todo', component: TodoComponent},
+  // {path: 'todo', component: TodoComponent},
+  {path: 'todotask',component: TodotaskComponent},
+  {path: 'rapidapi',component: RapidapiComponent},
   {path: '**', component: PageNotFoundComponent}
 
 ];

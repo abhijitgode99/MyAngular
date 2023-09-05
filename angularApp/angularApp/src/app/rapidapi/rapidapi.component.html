@@ -1,0 +1,75 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="col-md-10">
+            <h3>News</h3>
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">link</th>
+                        <th scope="col">providerPublishTime</th>
+                        <th scope="col">publisher</th>
+                        <th scope="col">relatedTickers</th>
+                        <!-- <th scope="col">thumbnail</th> -->
+                        <th scope="col">title</th>
+                        <th scope="col">type</th>
+                        <th scope="col">uuid</th>
+                    </tr>  
+                </thead>
+                <tbody>
+                    <tr *ngFor="let value of news">
+                       <td > {{value.link}}</td>
+                       <td> {{value.providerPublishTime}}</td>
+                       <td> {{value.publisher}}</td>
+                       <td> {{value.relatedTickers}}</td>
+                       <!-- <td> {{value.thumbnail.relatedTickers.resolutions.url}}</td> -->
+                       <td> {{value.title}}</td>
+                       <td> {{value.type}}</td>
+                       <td> {{value.uuid}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-10">
+            <h3>quotes</h3>
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">dispSecIndFlag</th>
+                        <th scope="col">exchDisp</th>
+                        <th scope="col">index</th>
+                        <th scope="col">industry</th>
+                        <th scope="col">industryDisp</th>
+                        <th scope="col">isYahooFinance</th>
+                        <th scope="col">longname</th>
+                        <th scope="col">quoteType</th>
+                        <th scope="col">score</th>
+                        <th scope="col">sector</th>
+                        <th scope="col">sectorDisp</th>
+                        <th scope="col">shortname</th>
+                        <th scope="col">symbol</th>
+                        <th scope="col">typeDisp</th>
+                    </tr>  
+                </thead>
+                <tbody>                    
+                    <tr *ngFor="let value of quotes">
+                       <td > {{value.dispSecIndFlag}}</td>
+                       <td> {{value.exchDisp}}</td>
+                       <td> {{value.index}}</td>
+                       <td> {{value.industry}}</td>
+                       <td> {{value.industryDisp}}</td>
+                       <td> {{value.isYahooFinance}}</td>
+                       <td> {{value.longname}}</td>
+                       <td> {{value.quoteType}}</td>
+                       <td> {{value.score}}</td>
+                       <td> {{value.sector}}</td>
+                       <td> {{value.sectorDisp}}</td>
+                       <td> {{value.shortname}}</td>
+                       <td> {{value.symbol}}</td>
+                       <td> {{value.typeDisp}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

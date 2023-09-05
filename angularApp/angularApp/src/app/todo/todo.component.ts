@@ -34,14 +34,14 @@ export class TodoComponent implements OnInit {
     })
   }
 
-  updateTodo() {
-    let todo = {
-      title: `Updated - Angular batch 7`
-    }
-    this.todoService.update('1693798506863',todo).subscribe(res => {
-      console.log('todo updated');
-    })
-  }
+  // updateTodo() {
+  //   let todo = {
+  //     title: `Updated - Angular batch 7`
+  //   }
+  //   this.todoService.update('1693798506863',todo).subscribe(res => {
+  //     console.log('todo updated');
+  //   })
+  // }
 
   deleteToDo() {
     this.todoService.deleteTodo('1693798506863').subscribe(res => {

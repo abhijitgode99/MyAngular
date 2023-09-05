@@ -4,10 +4,12 @@
     {{laptop.brand}}
     <img width="50" height="50" [src]="laptop.imgUrl" alt="">
 </div> -->
+
+
+
 <div class="sroll-bar">
 <div class="row mt-4" style="overflow-y: scroll; max-height: 1000px;">
     <div class="bg col-md-6" *ngFor="let laptop of objLaptop" >
-        
         <div class="card mx-2 my-2" >   
             <img class="mx-2 my-2" width="390px" height="390px" [src]="laptop.imgUrl" alt="">
              <li>brand:<strong>{{laptop.brand}} </strong></li> 
@@ -25,3 +27,4 @@
     </div>
 </div>
 </div>
+

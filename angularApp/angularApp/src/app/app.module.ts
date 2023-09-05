@@ -46,6 +46,8 @@ import { HookComponent } from './hook/hook.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { LogoutComponent } from './logout/logout.component';
 import { TodoComponent } from './todo/todo.component';
+import { TodotaskComponent } from './todotask/todotask.component';
+import { RapidapiComponent } from './rapidapi/rapidapi.component';
 
 
 
@@ -93,6 +95,8 @@ import { TodoComponent } from './todo/todo.component';
     MenuBarComponent,
     LogoutComponent,
     TodoComponent,
+    TodotaskComponent,
+    RapidapiComponent,
   ],
   imports: [
     BrowserModule,

@@ -22,17 +22,25 @@ export class TodoService {
    return this._httpClinet.get(this.apiUrl);
   }
 
-update(id: any, data: any) : Observable<any> {
-  let API_URL = `${this.apiUrl}/${id}`;
+  // update(id: any, data: any) : Observable<any> {
+  //   let API_URL = `${this.apiUrl}/${id}`;
+update(data: any) : Observable<any> {
+  let API_URL = `${this.apiUrl}/${data.id}`;
 
   return this._httpClinet.put(API_URL, data);
 
 }
 
-deleteTodo(id: any) : Observable<any> {
-  let API_URL = `${this.apiUrl}/${id}`;
+deleteTodo(data: any) : Observable<any> {
+  let API_URL = `${this.apiUrl}/${data.id}`;
 
   return this._httpClinet.delete(API_URL);
 }
 
 }
+// "todos": [
+//   {
+//     "id": 1693800210968,
+//     "title": "Angular batch 7"
+//   }
+// ]
