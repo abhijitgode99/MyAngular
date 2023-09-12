@@ -13,6 +13,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { TodoComponent } from './todo/todo.component';
 import { TodotaskComponent } from './todotask/todotask.component';
 import { RapidapiComponent } from './rapidapi/rapidapi.component';
+import { FirebaseComponent } from './firebase/firebase.component';
 
 
 const routes: Routes = [
@@ -36,8 +37,8 @@ const routes: Routes = [
   // {path: 'todo', component: TodoComponent},
   {path: 'todotask',component: TodotaskComponent},
   {path: 'rapidapi',component: RapidapiComponent},
+  {path:'firebase',component:FirebaseComponent},
   {path: '**', component: PageNotFoundComponent}
-
 ];
 
 @NgModule({

@@ -17,7 +17,6 @@ export class RapidapiComponent implements OnInit {
     this.rapidapiService.GetYahooFinance().subscribe(res => {
       console.log('from rapid api', res);
       this.newArray=res;
-      console.log(this.newArray.news[0].link)
       this.news=this.newArray.news.map((element)=>{
         return element;
       });

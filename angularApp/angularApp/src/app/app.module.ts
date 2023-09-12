@@ -48,6 +48,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { TodoComponent } from './todo/todo.component';
 import { TodotaskComponent } from './todotask/todotask.component';
 import { RapidapiComponent } from './rapidapi/rapidapi.component';
+import { FirebaseComponent } from './firebase/firebase.component';
 
 
 
@@ -97,6 +98,7 @@ import { RapidapiComponent } from './rapidapi/rapidapi.component';
     TodoComponent,
     TodotaskComponent,
     RapidapiComponent,
+    FirebaseComponent,
   ],
   imports: [
     BrowserModule,

@@ -38,10 +38,19 @@ export class FilterpipeComponent implements OnInit {
     }
   ]
   
+
   constructor() { }
 
   ngOnInit() {
     console.log(this.prodcutArr)
   }
-
+  AddProduct(prodname: any){
+    this.prodcutArr.push({
+      prodNo: 5,
+      productName:prodname ,
+      productPrice: '35000 RS',
+      availability: 'Available'
+    })
+  }
+  
 }

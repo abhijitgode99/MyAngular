@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class TodoService {
 
   apiUrl='http://localhost:3000/todos';
@@ -24,11 +25,10 @@ export class TodoService {
 
   // update(id: any, data: any) : Observable<any> {
   //   let API_URL = `${this.apiUrl}/${id}`;
+
 update(data: any) : Observable<any> {
   let API_URL = `${this.apiUrl}/${data.id}`;
-
   return this._httpClinet.put(API_URL, data);
-
 }
 
 deleteTodo(data: any) : Observable<any> {
@@ -36,7 +36,6 @@ deleteTodo(data: any) : Observable<any> {
 
   return this._httpClinet.delete(API_URL);
 }
-
 }
 // "todos": [
 //   {
