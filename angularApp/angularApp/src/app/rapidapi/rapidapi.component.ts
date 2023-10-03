@@ -32,4 +32,16 @@ export class RapidapiComponent implements OnInit {
       // });
     })
   }
+
+  GetMarketData() {
+    this.rapidapiService.getDataFormMarket().subscribe(res => {
+      console.log('rapid market data', res);
+    })
+  }
+
+  getMovers() {
+    this.rapidapiService.getMovers().subscribe(res => {
+      console.log('get movers', res);
+    })
+  }
 }

@@ -49,6 +49,7 @@ import { TodoComponent } from './todo/todo.component';
 import { TodotaskComponent } from './todotask/todotask.component';
 import { RapidapiComponent } from './rapidapi/rapidapi.component';
 import { FirebaseComponent } from './firebase/firebase.component';
+import { TaskManagerComponent } from './task-manager/task-manager.component';
 
 
 
@@ -99,6 +100,7 @@ import { FirebaseComponent } from './firebase/firebase.component';
     TodotaskComponent,
     RapidapiComponent,
     FirebaseComponent,
+    TaskManagerComponent,
   ],
   imports: [
     BrowserModule,

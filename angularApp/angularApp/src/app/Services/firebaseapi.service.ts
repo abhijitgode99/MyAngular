@@ -20,4 +20,8 @@ export class FirebaseapiService {
    return this._httpClient.post(this.url + 'post.json', postData);
   }
 
+  getPostDataFirebase() 
+  {
+    return this._httpClient.get(this.url+ 'post.json');
+  }
 }

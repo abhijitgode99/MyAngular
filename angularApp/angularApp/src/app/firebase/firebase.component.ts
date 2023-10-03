@@ -14,6 +14,11 @@ export class FirebaseComponent implements OnInit {
     this._firebaseService.CreatePost().subscribe(res => {
       console.log('firebase',res);
     })
+
+    this._firebaseService.getPostDataFirebase().subscribe(res => {
+      console.log('get data from firebase', res);
+    })
   }
 
+  
 }

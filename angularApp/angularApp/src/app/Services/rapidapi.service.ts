@@ -7,6 +7,9 @@ import { Injectable } from '@angular/core';
 export class RapidapiService {
 
   url = 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete?q=tesla&region=US';
+  apiUrlMarket= 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/v2/get-quotes?region=US&symbols=AMD,IBM,AAPL';
+  apiUrlMovers= 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/v2/get-movers?region=us&lang=en-US&start=0&count=6';
+
   constructor(private _httpClient: HttpClient) { }
 
   GetYahooFinance() {
@@ -17,4 +20,20 @@ export class RapidapiService {
    return this._httpClient.get(this.url, {headers: headers});
   }
 
+  getDataFormMarket()
+  {
+    let marketHeaders = new HttpHeaders({
+      'X-RapidAPI-Key': 'c2b090dad2mshb508a79e34cddcdp181128jsn4d12dd32b177',
+       'X-RapidAPI-Host': 'apidojo-yahoo-finance-v1.p.rapidapi.com'
+    })
+    return this._httpClient.get(this.apiUrlMarket, { headers: marketHeaders});
+  }
+
+  getMovers() {
+     let moverHeaders = new HttpHeaders({
+      'X-RapidAPI-Key': 'c2b090dad2mshb508a79e34cddcdp181128jsn4d12dd32b177',
+       'X-RapidAPI-Host': 'apidojo-yahoo-finance-v1.p.rapidapi.com'
+    })
+    return this._httpClient.get(this.apiUrlMovers, {headers: moverHeaders})
+  }
 }
