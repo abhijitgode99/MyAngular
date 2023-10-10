@@ -34,7 +34,7 @@ export class RapidapiComponent implements OnInit {
   }
 
   GetMarketData() {
-    this.rapidapiService.getDataFormMarket().subscribe(res => {
+    this.rapidapiService.getDataFormMarket('US','AMD').subscribe(res => {
       console.log('rapid market data', res);
     })
   }
